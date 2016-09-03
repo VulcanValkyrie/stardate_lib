@@ -1,0 +1,33 @@
+import time
+import datetime
+
+def get_date():
+  now = datetime.datetime.now()
+  year = now.year
+  month = now.month
+  week = now.isocalendar()[1]
+  day = now.day
+  hour = now.hour
+  weekday = datetime.datetime.today().weekday()
+  return year, month, week, day, hour, weekday
+
+# Original series stardate is done by another python lib I found. 
+# OS stardate is also super arbitrary and i'm not willing to make a whole new set of arbitrary rules
+
+def tng_stardate():
+  #hardcoding in the century because if this bot is running by yr 3100 something has gone horribly wrong
+  century = 1
+  year, month, week, day, hour, weekday = get_date()
+  weekday = weekday+1 #hacky, but it'll do for now
+  year = str(year)[-2:]
+  stardate = str(century) + str(year) + str(week) +'.'+ str(weekday)
+  return stardate
+  
+ 
+def new_format():
+  # this is the format used in the new batch of movies
+  # they actually picked one that makes sense 
+  year, month, week, day, hour, weekday = get_date()
+  daycount = (datetime.datetime(year, month, day) - datetime.datetime(year, 1, 1)).days + 1 
+  stardate = str(year) + '.'+ str(daycount)
+  return stardate
