@@ -10,6 +10,6 @@ There are a few formats for stardate, only a few of which have specific concrete
      -  The first digit is the last digit of the century. This is canon.
      -  The next part, canonically, is the season. Here in the real world, we don't have those, so I just used years since 2000
      -  From here there are 2-3 more digits specified, but they are inconsistent throughout the show as well as being entirely unexplained. In order to fill this slot, I used the number of weeks we are into the year. 
-     - The last digit, which is preceded by a decimal point. According to the creators, is a day counter for days in the week.
+     - The last digit is preceded by a decimal point. According to the creators, is a day counter for days in the week.
 
-I would have done another function for original series format stardate, but such a library exists, and I was not in the mood to create another set of arbitrariy rules, especially when it conflicts with an existing protocol. 
+I would have done another function for original series format stardate, but such a library exists, and I was not in the mood to create another set of arbitrary rules, especially when it conflicts with an existing protocol. 
